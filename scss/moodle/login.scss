@@ -1,0 +1,258 @@
+$loginbackground-gradient-from: $gray-100 !default;
+$loginbackground-animated-from: #3399ff !default;
+$loginbackground-gradient-to: $gray-300 !default;
+$logincontainer-bg: $white !default;
+$logincontainer-padding: 3rem !default;
+$logincontainer-shadow: $box-shadow !default;
+$logindivider-margin-top: 1.5rem !default;
+$logindivider-margin-bottom: 1.5rem !default;
+$logindivider-border: $border-color !default;
+$login-identity-provider-btn-border: $border-color !default;
+
+#logoimage{
+    display: none;
+}
+#page.aulas_toribio-animated-area{
+    flex-direction: row !important;
+    padding: 0 !important;
+    justify-content: center;
+}
+#aulas_toribio-login-image #region-main{
+    background-color: transparent;
+}
+.aulas_toribio-login-left-image{
+    background: url([[pix:theme|login-left-login]]);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.aulas_toribio-login-left-image-admin{
+    background: url([[pix:theme|login-left-admin]]);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+// @include media-breakpoint-down(lg) {
+//     .aulas_toribio-login-left-image-admin,
+//     .aulas_toribio-login-left-image{
+//         background-position: -317% 10%;
+//     }
+// }
+
+.aulas-regional-login-right-superior{
+    max-width: 30%;
+    max-height: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.aulas-regional-login-right-inferior{
+    max-width: 40%;
+    max-height: 40%;
+    position: absolute;
+    right: 0;
+    bottom: calc(0px + 100px);
+}
+
+.aulas-regional-logos-footer{
+    position: fixed;
+    width: 100%;
+    max-height: 100px;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    img{
+        max-height: 100px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.pagelayout-login #page {
+    background: $logincontainer-bg;
+    min-height: 75vh;
+    max-height: 100vh;
+    // @include gradient-x($loginbackground-gradient-from, $loginbackground-gradient-to, 0%, 100%);
+    div[role="main"] {
+        height: 100%;
+    }
+}
+
+.login-wrapper {
+     display: flex;
+     align-items: flex-start;
+     justify-content: end;
+     height: 100%;
+    //  max-width: 500px;
+    //  margin: 0 auto;
+    margin: 3rem 5rem 0rem 0rem;
+
+}
+@include media-breakpoint-down(lg) {
+    .login-wrapper{
+        align-items: flex-start;
+        justify-content: end;
+        margin:1rem 1rem 0rem 0rem;
+
+    }
+}
+
+//Styles modificados login
+
+#loginbtn{
+    width: 100%;
+    background-color: #317839 !important;
+    border-color: #317839 !important;
+    padding: 6px 12px 6px 12px;
+    height: 40px;
+}
+
+.login-container {
+    .aulas_toribio-img-logo{
+        max-height: 8rem;
+    }
+    .login-languagemenu {
+        display: flex;
+        justify-content: flex-start;
+        .dropdown-toggle{
+            box-shadow: none;
+        }
+        .dropdown-menu {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    }
+    .login-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .title-login-platform{
+        color: #317839;
+        font-size: 2rem;
+        font-family: 'montserrat', Arial, Helvetica, sans-serif;
+    }
+    .subtitle-login-platform{
+        font-size: 1.5rem;
+        font-family: 'montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #2C2C2C;
+    }
+    .login-divider {
+        display: none;
+    }
+
+    h1.login-heading {
+        font-size: 1.25rem;
+        font-family: 'montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: #151515;
+    }
+
+    h2.login-heading {
+        font-size: $h4-font-size;
+        font-weight: normal;
+    }
+    .login-identityproviders {
+        .login-identityprovider-btn {
+            background-color: #317839 !important;
+            border: $border-width solid #317839 !important;
+            max-width: 358px;
+            min-height: 40px;
+            max-height: 40px;
+            font-size: 1.25rem;
+            font-family: 'montserrat', Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #EEEEEE;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color: #317839 !important;
+            }
+        }
+    }
+    .divider {
+        width: $border-width;
+        background-color: $gray-300;
+        height: $font-size-base * 2;
+    }
+    .action-menu-trigger {
+        a {
+            margin: 0.5rem 0;
+        }
+    }
+    .loginform{
+        div:last-child{
+            justify-content: center;
+            display: none !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .login-container {
+        max-width: 630px;
+        @include border-radius();
+        margin-left: 100px;
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .login-container {
+       margin-left: 6px;
+    }
+}
+
+.btn-login-fixed{
+    position: fixed;
+    bottom: 17.5rem;
+    right: 2rem;
+    z-index: 2;
+    img{
+        box-shadow: 0px 4px 6px 0px rgba(135, 157, 202, 0.70);
+        border-radius: 51px;
+        width: 51px;
+    }
+    &:hover{
+        background: transparent !important;
+    }
+    &:focus{
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+.btn-login-fixed-help{
+    bottom: 13.5rem;
+    img{
+        box-shadow: 0px 4px 6px 0px rgba(135, 157, 202, 0.70);
+        border-radius: 51px;
+        width: 51px;
+    }
+    &:hover{
+        background: transparent !important;
+    }
+    &:focus{
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+#page-login-index{
+    .talentum-footer-logos{
+        display: none;
+    }
+    .footer-block-logos{
+        background: url([[pix:theme|logos-footer]]);
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding-top: 1rem;
+    }
+}

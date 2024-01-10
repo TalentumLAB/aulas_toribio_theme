@@ -1,0 +1,189 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_aulas_toribio/login
+
+    Login page template
+
+    Example context (json):
+    {
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Login page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        }
+    }
+}}
+{{> theme_aulas_toribio/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="container-fluid mt-0 aulas_toribio-animated-area">
+        <div class="row col-sm-12 p-0">
+            <!-- <div class="col-sm-6 p-0 aulas_toribio-login-left-image" id="aulas_toribio-login-left-image">
+            </div>
+            <div class="col-sm-6 p-0 aulas_toribio-login-left-image-admin" id="aulas_toribio-login-left-image-admin" style="display:none">
+            </div> -->
+               
+                
+                <img style="position: absolute; right: 1%;top: 2%;width: 30%;" src='{{img_footer}}' />
+                
+                <div id="page-content" class="p-0  aulas_toribio-login-right-side">
+                    <div class="p-0 h-100 aulas_toribio-login-left-image" id="aulas_toribio-login-image">
+                        <div id="region-main-box" class="col-12 h-100">
+                            <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
+                                <div class="login-wrapper">
+                                    <div class="login-container col-md-7 col-xl-12 text-center" style="margin-top:3rem;">
+                                        <img src="{{img_logo}}" class="aulas_toribio-img-logo mt-2 mb-4"/>
+                                        <div id="text-login-non-admin">
+                                            <!--<h3 class="title-login-platform">Plataforma LMS </h3> -->
+                                            <p class="subtitle-login-platform">Espacio educativo para docentes y estudiantes que apropian Aulas STEAM Meta</p>
+                                        </div>
+                                        <!--- Login Administrador --->
+                                        <div id="text-login-admin">
+                                            <!-- <h3 class="title-login-platform">Plataforma LMS - Administrador </h3> -->
+                                            <p class="subtitle-login-platform" >Espacio educativo para docentes y estudiantes que apropian Aulas STEAM Meta</p>
+                                        </div>                                
+                                        <div>
+                                            {{{ output.main_content }}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+    <button class="btn btn-icon  icon-no-margin btn-login-fixed" id="showlogin">
+            <img src="{{logo_admin}}" />
+    </button>
+    <button class="btn btn-icon  icon-no-margin btn-login-fixed btn-login-fixed-help" id="btn-help" data-toggle="modal" data-target="#mesaAyuda">
+            <img src="{{logo_help}}" />
+    </button>
+
+    <!-- Modal -->
+<div class="modal fade" id="mesaAyuda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Acceso a la mesa de auyda</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p> <a href="https://api.whatsapp.com/send?phone=573330334119&amp;text=Bienvenido%20a%20la%20l%C3%ADnea%20de%20atenci%C3%B3n%20" target="_BLank">3330334119 Línea whatsapp</a> </p>
+       <p><a href="https://soportesteam.helppeoplecloud.com">https://soportesteam.helppeoplecloud.com </a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+    
+    {{!
+        Este tema no tiene footer en el login.
+    }}
+    {{!> theme_aulas_toribio/footer }}
+    
+    
+</div>
+<script>
+
+var showLoginButton = document.getElementById('btn-help');
+var myModal = document.getElementById('mesaAyuda');
+var modalCloseButton = myModal.querySelector('.close');
+
+showLoginButton.addEventListener('click', function(event) {
+    event.stopPropagation();
+    myModal.style.opacity = '0';
+    myModal.classList.add('show');
+    setTimeout(function() {
+        myModal.style.opacity = '1';
+        myModal.style.background = 'rgba(10, 10, 10, 0.45)';
+    }, 10); // Pequeño retraso para asegurar que las propiedades se apliquen correctamente
+});
+
+modalCloseButton.addEventListener('click', function() {
+    myModal.style.opacity = '0';
+    setTimeout(function() {
+        myModal.classList.remove('show');
+        myModal.style.opacity = '1';
+        myModal.style.background = '';
+    }, 300);
+});
+
+document.addEventListener('click', function(event) {
+    if (event.target === myModal) {
+        myModal.style.opacity = '0';
+        setTimeout(function() {
+            myModal.classList.remove('show');
+            myModal.style.opacity = '1';
+            myModal.style.background = '';
+        }, 300);
+    }
+});
+
+
+document.getElementById('login').style.display='none';
+document.getElementById('text-login-admin').style.display='none';
+document.getElementById('loginlogo').style.display='none';
+
+document.getElementById('showlogin').addEventListener("click", function(){ 
+    let login = document.getElementById('login');
+    let loginTextAdmin = document.getElementById('text-login-admin');
+    let loginImage = document.getElementById('aulas_toribio-login-image');
+    let keycloak = document.querySelector('.login-identityproviders');
+    let loginText = document.getElementById('text-login-non-admin');
+    if(login.style.display == 'block'){
+           login.style.display='none';
+           loginImage.classList.remove("aulas_toribio-login-left-image-admin");
+           loginImage.classList.add("aulas_toribio-login-left-image");
+           loginTextAdmin.style.display='none';
+           loginText.style.display='block';
+           keycloak.style.display='block';
+    }else{
+        login.style.display='block';
+        loginImage.classList.remove("aulas_toribio-login-left-image");
+        loginImage.classList.add("aulas_toribio-login-left-image-admin");
+        loginTextAdmin.style.display='block';
+        loginText.style.display='none';
+        keycloak.style.display='none';
+    }
+    
+    document.getElementById('loginlogo').style.display='block';
+    //document.getElementById('btn-login-admin').style.display='none';
+    });
+
+</script>
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_aulas_toribio/loader');
+require(['theme_aulas_toribio/loader'], function() {
+  M.util.js_complete('theme_aulas_toribio/loader');
+});
+{{/js}}

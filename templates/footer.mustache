@@ -1,0 +1,466 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_aulas_toribio/footer
+
+    Page footer.
+
+    Example context (json):
+    {
+        "output": {
+            "page_doc_link": "Help and documentation",
+            "supportemail": "<a href=\"#\">Contact site support</a>",
+            "has_popover_links": true,
+            "services_support": "Services and support",
+            "login_info": "You are logged in as cute kitten",
+            "moodle_release": "90210",
+            "img": img.png
+        }
+    }
+}}
+<div>
+   <img class="footer-background w-100" src="{{bk_footer}}"> 
+</div>
+{{!
+    Sección de accesibilidad
+}}
+
+
+
+ <button class="button_accebility" id="openBtn" role="button" aria-controls="offcanvas">
+        <img src="{{bg_button}}" role="img" alt="Imagen botón accesibilidad" />
+   </button>
+
+   <div id="offCanvas" class="off-canvas" aria-labelledby="Menú de accesibilidad">
+    <div class="header-offCanvas">
+        <h3>Menú de accesibilidad</h3>
+        <button id="closeBtn" aria-label="Cerrar menú de accesibilidad">
+            <i class="icon fa fa-times fa-fw" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div style="border-radius: 1rem 1rem 0 0; background: #F8F8F8; margin-top: -2rem;">
+       <div class="aulas-regional-access-container">
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_contraste" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{contraste}}" alt="botón para aplicar contraste" role="img">
+                    <span class="" aria-labelledby="Contraste">Contraste</span>
+                </a>
+            </div>
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_grises" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{grises}}" alt="botón para aplicar escala de grises" role="img">
+                    <span class="" aria-labelledby="Saturación">Saturación</span>
+                </a>
+            </div>
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_font-increase" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{font-increase}}" alt="botón para incrementar la fuente" role="img">
+                    <span class="" aria-labelledby="Aumentar texto">Aumentar texto</span>
+                </a>
+            </div>
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_font-normal" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{font-normal}}" alt="botón para normalizar la fuente" role="img">
+                    <span class="" aria-labelledby="Texto normal">Texto normal</span>
+                </a>
+            </div>
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_font-decrease" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{font-decrease}}" alt="botón para disminuir la fuente" role="img">
+                    <span class="" aria-labelledby="Disminuir texto">Disminuir texto</span>
+                </a>
+            </div>
+            <div class="aulas-regional-access-container_item">
+                <a href="#" class="aulas-regional-access-container_content" id="aulas-regional-access_line-height" role="button" aria-pressed="true">
+                    <img class="w-100" src="{{line-height}}" alt="botón para ajustar el espacio entre líneas" role="img">
+                    <span class="" aria-labelledby="Espacio entre líneas">Espacio entre líneas</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer id="page-footer" class="footer-popover bg-white">
+
+<div class="page-footer-inner">
+	    <div class="container-fluid">
+	        <div id="course-footer"></div>
+	        
+	        
+	        <div class="footer-main-row row">
+		        
+		        <!-- <div class="footer-branding col-12 col-lg-3">
+			        
+			        <div class="footer-logo-holder d-flex justify-content-center">
+	                    <img class="footer-logo footer-logo-custom" src="{{output.get_compact_logo_url}}" alt="logo">
+                    </div>
+ 
+	               
+			        
+		        </div>--><!--//footer-branding-->
+		        
+		        <div class="footer-custom col-12 col-lg-12 ">
+			        
+			        <div class="footer-blocks">
+	<div class="row">
+		
+		<!--<div class="footer-block footer-block-links col-12 col-md-6 col-lg-3">
+            <div class="text_to_html"><h4 class="footer-block-title">About Us</h4><ul class="footer-links list-unstyled"><li class="link-item"><a href="#">Our Value</a></li><li class="link-item"><a href="#">Our Instructors</a></li><li class="link-item"><a href="#">Our Partners</a></li><li class="link-item"><a href="#">Press</a></li></ul></div>
+		</div>//footer-block-->
+
+		<!--<div class="footer-block footer-block-links col-12 col-md-6 col-lg-3">
+            <div class="text_to_html"><h4 class="footer-block-title">Learning</h4><ul class="footer-links list-unstyled"><li class="link-item"><a href="#">Code of Conduct</a></li><li class="link-item"><a href="#">Accessibility</a></li><li class="link-item"><a href="#">T&amp;C</a></li><li class="link-item"><a href="#">Privacy</a></li></ul></div>
+		</div>//footer-block-->
+
+        <div class="footer-block-logos footer-block-links col-12  d-flex align-items-center">
+           <img src="{{img}}" class="talentum-footer-logos w-100"/>
+		</div><!--//footer-block-->
+
+		<!--<div class="footer-block footer-block-links col-8 col-md-4 col-lg-3 d-flex align-items-center">
+            <div class="footer-contact-block">
+                <h4 class="footer-block-title">Acceso a mesa de ayuda</h4>
+                <ul class="footer-links list-unstyled">
+                    <!--<li class="link-item"><a href="#">Cl 7 # 26-42 Barrio El Cedro, Cali</a></li>
+                    <li class="link-item"><a href="https://api.whatsapp.com/send?phone=573330334119&text=Bienvenido%20a%20la%20l%C3%ADnea%20de%20atenci%C3%B3n%20" target="_BLank">3330334119 Línea whatsapp</a></li>
+                    <li class="link-item"><a href="https://soportesteam.helppeoplecloud.com" target="_Blank">https://soportesteam.helppeoplecloud.com</a></li>
+                </ul>
+            </div>
+		</div>//footer-block -->
+
+        <!-- <div class="footer-block footer-block-links col-4 col-md-1 col-lg-1">
+             <div class="footer-social-media">
+
+                    <ul class="d-flex align-items-center flex-md-column flex-wrap p-0">
+                        
+                            <li class="list-inline-item">
+                                <a href="#twitter" title="#twitter" alt="#twitter" target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#facebook" title="#facebook" alt="#facebook" target="_blank">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#youtube" title="#youtube" alt="#youtube" target="_blank">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#instagram" title="#instagram" alt="#instagram" target="_blank">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        
+                    </ul><!--//social-media-list
+
+            </div><!--//footer-social-media¿
+		</div><!--//footer-block-->
+
+
+	</div><!--//row-->
+</div><!--//footer-blocks-->
+			        
+		        </div><!--//footer-custom-->
+		        
+	        </div><!--//row-->
+
+	        
+	        
+	    </div>
+	</div>
+
+
+
+    <div data-region="footer-container-popover">
+       
+    </div>
+    <div class="footer-content-popover container" data-region="footer-content-popover">
+        {{# output.has_popover_links }}
+            <div class="footer-section p-3 border-bottom">
+                {{# output.page_doc_link }}
+                    <div>{{{ output.page_doc_link }}}</div>
+                {{/ output.page_doc_link }}
+
+                {{# output.services_support_link }}
+                    <div>{{{ output.services_support_link }}}</div>
+                {{/ output.services_support_link }}
+
+                {{# output.supportemail }}
+                    <div>{{{ output.supportemail }}}</div>
+                {{/ output.supportemail }}
+            </div>
+        {{/ output.has_popover_links }}
+        <div class="footer-section p-3 border-bottom">
+            <div class="logininfo">
+                {{{ output.login_info }}}
+            </div>
+            <div class="tool_usertours-resettourcontainer">
+            </div>
+
+            {{{ output.standard_footer_html }}}
+            {{{ output.standard_end_of_body_html }}}
+        </div>
+        <div class="footer-section p-3">
+            <div>{{#str}}poweredbymoodle, core{{/str}}</div>
+            {{#output.moodle_release}}
+                <div>
+                    {{#str}}version, core{{/str}} {{{ output.moodle_release }}}
+                </div>
+            {{/output.moodle_release}}
+        </div>
+    </div>
+
+    <div class="footer-content-debugging footer-dark bg-dark text-light">
+        <div class="container-fluid footer-dark-inner">
+            {{{ output.debug_footer_html }}}
+        </div>
+    </div>
+</footer>
+{{#js}}
+require(['theme_aulas_toribio/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+
+
+
+let contrast = document.getElementById('aulas-regional-access_contraste');
+let have_contrast = false;
+contrast.addEventListener("focus", function(){
+    contrast.addEventListener('keydown', function(event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+            // Realiza la acción deseada, como ejecutar un click en el elemento
+            contrast.click();
+        }
+    });
+});
+
+contrast.addEventListener("click", function(){
+    if(have_contrast){
+        have_contrast = false;
+         document.querySelector('body').classList.remove('add-gray');
+        document.querySelector('body').classList.remove('add-contrast');
+    }else{
+        document.querySelector('body').classList.remove('add-gray');
+        document.querySelector('body').classList.add('add-contrast');
+        have_contrast = true;
+    }
+});
+
+let gray = document.getElementById('aulas-regional-access_grises');
+let have_gray = false;
+gray.addEventListener("focus", function(){
+    gray.addEventListener('keydown', function(event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+            // Realiza la acción deseada, como ejecutar un click en el elementofi
+            gray.click();
+        }
+    });
+});
+gray.addEventListener("click", function(){
+    if(have_gray){
+        have_gray = false;
+        document.querySelector('body').classList.remove('add-contrast');
+        document.querySelector('body').classList.remove('add-gray');
+    }else{
+         //remover los demas filtros
+        document.querySelector('body').classList.remove('add-contrast');
+        document.querySelector('body').classList.add('add-gray');
+        have_gray = true;
+    }
+});
+
+
+let inc_font = document.getElementById('aulas-regional-access_font-increase');
+let max_font = 3;
+let actual_font = 1;
+inc_font.addEventListener("focus", function(){
+    inc_font.addEventListener('keydown', function(event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+            // Realiza la acción deseada, como ejecutar un click en el elemento
+            inc_font.click();
+        }
+    });
+});
+inc_font.addEventListener("click", function(){
+    if(actual_font <= max_font){
+        let parrafs = document.getElementsByTagName("p");
+        let h1s = document.getElementsByTagName("h1");
+        let h2s = document.getElementsByTagName("h2");
+        let h3s = document.getElementsByTagName("h3");
+        let as = document.getElementsByTagName("a");
+        for(parraf of parrafs) {
+            let style = getComputedStyle(parraf);
+            let add =  +style.fontSize.slice(0,-2) + 4;
+            parraf.style.fontSize = add +'px';
+        }
+        for(h1 of h1s) {
+            let style = getComputedStyle(h1);
+            let add =  +style.fontSize.slice(0,-2) + 4;
+            h1.style.fontSize = add +'px';
+        }
+        for(h2 of h2s) {
+            let style = getComputedStyle(h2);
+            let add =  +style.fontSize.slice(0,-2) + 4;
+            h2.style.fontSize = add +'px';
+        }
+        for(h3 of h3s) {
+            let style = getComputedStyle(h3);
+            let add =  +style.fontSize.slice(0,-2) + 4;
+            h3.style.fontSize = add +'px';
+        }
+        for(a of as) {
+            let style = getComputedStyle(a);
+            let add =  +style.fontSize.slice(0,-2) + 4;
+            a.style.fontSize = add +'px';
+        }
+        actual_font++;
+    }
+});
+
+
+let normal_font = document.getElementById('aulas-regional-access_font-normal');
+normal_font.addEventListener("focus", function(){
+    normal_font.addEventListener('keydown', function(event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+            // Realiza la acción deseada, como ejecutar un click en el elemento
+            normal_font.click();
+        }
+    });
+});
+normal_font.addEventListener("click", function(){
+    let parrafs = document.getElementsByTagName("p");
+        let h1s = document.getElementsByTagName("h1");
+        let h2s = document.getElementsByTagName("h2");
+        let h3s = document.getElementsByTagName("h3");
+        let as = document.getElementsByTagName("a");
+        for(parraf of parrafs) {
+            parraf.removeAttribute("style");
+        }
+        for(h1 of h1s) {
+            h1.removeAttribute("style");
+        }
+        for(h2 of h2s) {
+            h2.removeAttribute("style");
+        }
+        for(h3 of h3s) {
+            h3.removeAttribute("style");
+        }
+        for(a of as) {
+            a.removeAttribute("style");
+        }
+    actual_font =  1;
+});
+
+let dec_font = document.getElementById('aulas-regional-access_font-decrease');
+
+dec_font.addEventListener("focus", function(){
+    dec_font.addEventListener('keydown', function(event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+            // Realiza la acción deseada, como ejecutar un click en el elemento
+            dec_font.click();
+        }
+    });
+});
+
+dec_font.addEventListener("click", function(){
+    if(actual_font > 1){
+        let parrafs = document.getElementsByTagName("p");
+        let h1s = document.getElementsByTagName("h1");
+        let h2s = document.getElementsByTagName("h2");
+        let h3s = document.getElementsByTagName("h3");
+        let as = document.getElementsByTagName("a");
+        for(parraf of parrafs) {
+            let style = getComputedStyle(parraf);
+            let add =  +style.fontSize.slice(0,-2) - 4;
+            parraf.style.fontSize = add +'px';
+        }
+        for(h1 of h1s) {
+            let style = getComputedStyle(h1);
+            let add =  +style.fontSize.slice(0,-2) - 4;
+            h1.style.fontSize = add +'px';
+        }
+        for(h2 of h2s) {
+            let style = getComputedStyle(h2);
+            let add =  +style.fontSize.slice(0,-2) - 4;
+            h2.style.fontSize = add +'px';
+        }
+        for(h3 of h3s) {
+            let style = getComputedStyle(h3);
+            let add =  +style.fontSize.slice(0,-2) - 4;
+            h3.style.fontSize = add +'px';
+        }
+        for(a of as) {
+            let style = getComputedStyle(a);
+            let add =  +style.fontSize.slice(0,-2) - 4;
+            a.style.fontSize = add +'px';
+        }
+        actual_font--;
+    }
+});
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const offCanvas = document.getElementById("offCanvas");
+
+openBtn.addEventListener("click", () => {
+     offCanvas.style.right = "0";
+});
+
+closeBtn.addEventListener("click", () => {
+    offCanvas.style.right = "-350px"; /* Ajusta este valor para que coincida con el ancho del div */
+});
+
+const btn_line_height = document.getElementById('aulas-regional-access_line-height');
+
+let maxLineHeigth = 0;
+btn_line_height.addEventListener('click', function() {
+    
+    const elementos = document.querySelectorAll('p, span, h1, h2, h3, a');
+   if(maxLineHeigth <= 3){
+        elementos.forEach(function(elemento) {
+            // Obtiene el valor actual de line-height y conviértelo de cadena a número
+            let lineHeight = parseFloat(window.getComputedStyle(elemento).lineHeight);
+
+            lineHeight += 2;
+            elemento.style.lineHeight = `${lineHeight}px`;
+        });
+        maxLineHeigth += 1;
+    }else{
+        elementos.forEach(function(elemento) {
+            elemento.removeAttribute("style");
+            maxLineHeigth = 0;
+        });
+    }
+       
+        
+        
+        
+    
+    
+});
+
+{{/js}}
+
