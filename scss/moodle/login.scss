@@ -84,11 +84,12 @@ $login-identity-provider-btn-border: $border-color !default;
 .login-wrapper {
      display: flex;
      align-items: flex-start;
-     justify-content: end;
+     justify-content: center;
+     align-items: center;
      height: 100%;
     //  max-width: 500px;
     //  margin: 0 auto;
-    margin: 3rem 5rem 0rem 0rem;
+   
 
 }
 @include media-breakpoint-down(lg) {
@@ -199,7 +200,7 @@ $login-identity-provider-btn-border: $border-color !default;
     .login-container {
         max-width: 630px;
         @include border-radius();
-        margin-left: 100px;
+        
     }
 }
 
