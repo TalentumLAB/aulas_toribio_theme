@@ -92,28 +92,28 @@ $login-identity-provider-btn-border: $border-color !default;
    
 
 }
-@include media-breakpoint-down(lg) {
-    .login-wrapper{
-        align-items: flex-start;
-        justify-content: end;
-        margin:1rem 1rem 0rem 0rem;
+// @include media-breakpoint-down(lg) {
+//     .login-wrapper{
+//         align-items: flex-start;
+//         justify-content: end;
+//         margin:1rem 1rem 0rem 0rem;
 
-    }
-}
+//     }
+// }
 
 //Styles modificados login
 
 #loginbtn{
     width: 100%;
-    background-color: #317839 !important;
-    border-color: #317839 !important;
+    background-color: #004514 !important;
+    border-color: #004514 !important;
     padding: 6px 12px 6px 12px;
     height: 40px;
 }
 
 .login-container {
     .aulas_toribio-img-logo{
-        max-height: 8rem;
+        max-height: 9rem;
     }
     .login-languagemenu {
         display: flex;
@@ -198,7 +198,8 @@ $login-identity-provider-btn-border: $border-color !default;
 
 @include media-breakpoint-up(md) {
     .login-container {
-        max-width: 630px;
+        max-width: 430px;
+        margin-bottom: 5rem;
         @include border-radius();
         
     }
