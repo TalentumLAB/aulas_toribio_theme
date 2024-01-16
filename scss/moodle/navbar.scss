@@ -9,11 +9,13 @@
     box-shadow: none;
     border-bottom: $gray-300 1px solid;
     align-items: center;
-    height: $navbar-height + 1px;
+    height: 91px;
 
     .navbar-brand {
         .logo {
-            max-height: calc(#{$navbar-height} - (#{$primary-nav-padding-y} * 2));
+            max-height: calc(82px - (0.25rem * 2));
+            border-right: 1px solid #2D3648;
+            padding-right: 1rem;
         }
     }
     .nav-link {
