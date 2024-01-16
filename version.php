@@ -24,6 +24,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2024011011;
+$plugin->version   = 2024011013;
 $plugin->requires  = 2022041200;
 $plugin->component = 'theme_aulas_toribio';
